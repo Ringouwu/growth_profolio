@@ -1,0 +1,31 @@
+WITH daily_roi AS (
+    SELECT 
+        date,
+        channel,
+        spend,
+        revenue,
+        revenue/NULLIF(spend,0) as daily_roi,
+        AVG(revenue/NULLIF(spend,0)) OVER(
+            PARTITION BY channel 
+            ORDER BY date 
+            ROWS BETWEEN 6 PRECEDING AND CURRENT ROW
+        ) as roi_7d_avg
+    FROM marketing_daily
+    WHERE date >= DATEADD(month, -3, GETDATE())
+)
+SELECT 
+    channel,
+    AVG(roi_7d_avg) as stable_roi,
+    CASE 
+        WHEN AVG(roi_7d_avg) > 6 THEN 
+
+        WHEN AVG(roi_7d_avg) > 4.5 THEN 
+
+        WHEN AVG(roi_7d_avg) < 3 THEN 
+
+        ELSE 
+
+    END as budget_recommendation
+FROM daily_roi
+WHERE roi_7d_avg IS NOT NULL
+GROUP BY channel;
