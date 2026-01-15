@@ -1,20 +1,9 @@
-yangshuo_growth-portfolio/ # 你的仓库根目录
-├── README.md              # 【核心】首页介绍，必须精心撰写
-├── docs/                  # 【文档】存放你的方法论、分析框架
-│   ├── AARRR模型实战指南.md
-│   ├── 用户留存分析框架.md
-│   └── 增长实验设计流程.md
-├── case-studies/          # 【案例】实战项目
-│   ├── 案例A-电商首页改版提升转化率/
-│   │   ├── README.md      # 案例概述、背景、目标、我的角色
-│   │   ├── analysis.md    # 详细分析过程、数据洞察
-│   │   ├── sql/          # 用到的核心SQL查询
-│   │   └── results/      # 结果图表、最终报告摘要
-│   └── 案例B-通过内容策略驱动用户激活/
-├── sql-scripts/           # 【SQL代码】存放可复用的查询模板
-│   ├── 用户生命周期划分.sql
-│   ├── 漏斗转化分析.sql
-│   └── 核心指标日报查询.sql
-└── assets/                # 资源文件夹，存放图片、图表等
-
-
+**作品集**：
+1. SQL：多表连接、子查询、窗口函数等复杂查询
+2. Tableau 或 Power BI，通过图表讲述业务故事（tableau public免费）
+3. 用过往或者虚拟项目，做EXCEL数据集（users，orders，events等等），去做分析。核心指标：展示mrr、用户增长趋势等。转化漏斗。客户留存矩阵。
+4. python读取模拟数据，重复SQL阶段做的分析，生成趋势图。用python计算一个简单的客户生命周期价值LTV模型。
+---
+以上做一个tableau仪表链接和jupyter notebook文件，展示py代码和图表。
+5. 把分析结果做一个书面报告。（参考行业分析报告）（虚拟项目、增长分析报告、SQL代码，Tableau图表链接、基于数据的增长假设和AB测试方案）
+6. Github上做仓库，存SQL，jupyter notebook，pdf报告。
